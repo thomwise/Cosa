@@ -4,9 +4,13 @@ img {
 }
 
 header {
-  height: 200px;
+  height: auto;
   width: auto;
   background-color: black;
+}
+
+input {
+  width: 100%;
 }
 /**********************************************
 *** GENERAL
@@ -29,7 +33,7 @@ body {
     font-family: Open Sans;
     font-size: 16px;
     position: relative;
-    height: 100vh;
+    height: 100px;
     font-weight: 400;
 }
 
@@ -40,6 +44,9 @@ body {
 /**********************************************
 *** TOP PART
 **********************************************/
+#title {
+  font-size: 70px;
+}
 
 .top {
     height: 40vh;
@@ -49,23 +56,15 @@ body {
     position: relative;
 }
 
-.container {
-    position: absolute;
-    width: 350px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-}
-
 .container__title {
-    font-size: 18px;
-    text-align: center;
+    font-size: 25px;
+    align-items: center;
+    width: auto;
     margin-bottom: 10px;
     font-weight: 300;
 }
 
-.budget__value {
+.dashboard__client--name {
     font-weight: 300;
     font-size: 46px;
     text-align: center;
@@ -73,46 +72,50 @@ body {
     letter-spacing: 2px;
 }
 
-.budget__income,
-.budget__expenses {
-    padding: 12px;
-    text-transform: uppercase;
-}
-
-.budget__income {
+.meeting__type {
     margin-bottom: 10px;
-    background-color: #28B9B5;
+    margin-right: 20px;
+    font-size: 20px;
 }
 
-.budget__expenses {
-    background-color: #FF5049;
-}
 
-.budget__income--text,
-.budget__expenses--text {
+
+.meeting__type--text {
     float: left;
-    font-size: 13px;
     color: #444;
     margin-top: 2px;
+    margin: 0px 50px 0px 0px;
+    width: 45%;
 }
 
-.budget__income--value,
-.budget__expenses--value {
-    letter-spacing: 1px;
-    float: left;
+.attendee__name {
+  float: left;
+  transition: transform .3s;
 }
 
-.budget__income--percentage,
-.budget__expenses--percentage {
-    float: left;
-    width: 34px;
-    font-size: 11px;
-    padding: 3px 0;
-    margin-left: 10px;
+.attendee__delete--btn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  display: none;
 }
 
-.budget__expenses--percentage {
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
-    border-radius: 3px;
+.attendee__delete--btn:focus { 
+  outline: none; 
+
+}
+
+.attendee__delete--btn:active { 
+  transform: translateY(2px); 
+}
+
+.attendee:hover .attendee__delete--btn { 
+  display: block; 
+}
+.attendee:hover .attendee__name { 
+  transform: translateX(-20px); 
 }
